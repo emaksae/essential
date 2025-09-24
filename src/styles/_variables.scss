@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-light: #e2e2e2;
+    --color-gray-dark: #5c5c5c;
+
+    --color-base: var(--color-white);
+    --color-accent: var(--color-black);
+    --color-additional-1: var(--color-gray-light);
+    --color-additional-2: var(--color-gray-dark);
+
+
+    --border: #{rem(1)} solid var(--color-black);
+
+    --font-family-base: 'Inter', sans-serif;
+    --font-family-title: 'Schibsted Grotesk', sans-serif;
+    
+    --container-width: #{rem(1600)};
+    --container-padding-x: #{rem(60)};
+
+    @include mobile {
+        --container-padding-x: #{rem(20)};
+    }
+
+    @include tablet {
+        --container-padding-x: #{rem(40)};
+    }
+
+    --transition-duration: 0.2s;
+}    

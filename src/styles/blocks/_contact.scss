@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.contact {
+  &__inner {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    margin-top: rem(50);
+    gap: rem(20);
+  }
+
+  &__title {
+    @include fluid-text(50, 30);
+
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(20);
+
+    @include mobile-s {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    padding: rem(15) rem(20);
+    text-align: center;
+    color: var(--color-base);
+    background-color: var(--color-accent);
+    border-radius: rem(30);
+  }
+
+  &__link {
+    color: var(--color-additional-1);
+
+    &:hover {
+      color: var(--color-base);
+    }
+  }
+}

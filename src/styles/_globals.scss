@@ -1,0 +1,63 @@
+@use 'helpers' as *;
+
+html {
+    scroll-behavior: smooth;
+
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
+body {
+    @include fluid-text(18, 14);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-family-base);
+    font-weight: 500;
+    color: var(--color-accent);
+    background-color: var(--color-base);
+    // scroll-behavior: smooth;
+    // direction: 10s;
+
+    &.dark-theme {
+        --color-base: var(--color-black);
+        --color-accent: var(--color-white);
+        --color-additional-1: var(--color-gray-dark);
+        --color-additional-2: var(--color-gray-light);
+    }
+}
+
+main {
+    flex-grow: 1;
+}
+
+section[id] {
+  @include mobile {
+    scroll-margin-top: rem(55);
+  } 
+}
+
+h1, .h1 {
+    font-family: var(--font-family-title);
+    font-weight: 700;
+}
+
+h2, .h2,
+h3, .h3 {
+    font-family: var(--font-family-title);
+    font-weight: 500;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+svg * {
+    @include fluid-text(18, 14);
+    text-decoration: none;
+    transition-duration: var(--transition-duration);
+}

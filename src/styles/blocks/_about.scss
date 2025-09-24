@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.about {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: rem(30);
+    margin-top: rem(30);
+    justify-content: center;
+    row-gap: rem(30);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    @include fluid-text(40, 30);
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(20);
+    font-weight: 700;
+
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(10);
+    
+  }
+
+  &__item {    
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    max-width: 95%;
+    background-color: var(--color-additional-1);
+    padding: rem(10);
+    border-radius: rem(10);
+    box-shadow: 0.5px 0.5px 4px var(--color-additional-1);
+  }
+}

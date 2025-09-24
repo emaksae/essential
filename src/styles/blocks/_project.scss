@@ -1,0 +1,60 @@
+@use '../helpers' as *;
+
+.project {
+  
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+  }
+  
+
+  &__header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: rem(50);
+    
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+    }
+  }
+
+  &__title {
+    @include fluid-text(70, 60);
+
+    font-weight: 700;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    row-gap: rem(30);   
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: rem(10);
+  }
+
+  &__image {
+    border-radius: rem(30);
+  }
+
+  &__about {
+    color: var(--color-accent);
+  }
+
+  &__name{
+    font-weight: 700;
+    color: inherit;
+  }
+}

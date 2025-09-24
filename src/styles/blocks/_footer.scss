@@ -1,0 +1,7 @@
+@use '../helpers' as *;
+
+.footer {
+  &__copyright {
+    margin: rem(30);
+  }
+}

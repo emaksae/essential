@@ -1,0 +1,165 @@
+@use '../helpers' as *;
+
+
+.header {
+  
+  @include mobile {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-base);
+    z-index: 2;
+  }
+
+  &__overlay {
+    @include mobile-above {
+      display: contents;
+    }
+
+    @include mobile {
+      display: none;
+
+      &.is-active {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(30);
+        height: 100vh;
+        width: 100%;
+        margin: auto;
+        background-color: var(--color-base);
+        z-index: 1;
+      }
+    }
+  }
+  
+
+  &__title {
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      text-shadow: 0.1px 0.1px 1px var(--color-accent);
+    }
+
+    @include mobile {
+      &:not(.is-active) {
+        display: none;
+      }
+    }
+    
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(15);
+
+    @include mobile {
+      height: rem(40);
+    }
+  }
+
+  &__menu {
+    &--list {      
+      display: flex;
+      padding: rem(4);
+      gap: rem(30);
+      background-color: var(--color-accent);
+      border-radius: rem(30);
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit;
+      }
+
+    }
+
+    &--link {
+      display: flex;
+      align-items: center;
+      padding: rem(5) rem(10);
+      color: var(--color-additional-1);
+      gap: rem(4);
+      border-radius: rem(30);
+
+      &:hover {
+        color: var(--color-base);
+      }
+
+      @include mobile {
+        color: var(--color-additional-2);
+
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+
+      &.is-active {
+        color: var(--color-accent);
+        background-color: var(--color-base);
+        
+
+        &:hover {
+          color: var(--color-additional-2);
+        }
+
+
+        @include mobile {
+          color: var(--color-additional-1);
+          background-color: var(--color-accent);
+
+          &:hover {
+            color: var(--color-base);
+          }
+        }
+      }
+    }
+
+    &--quantity {
+      padding-inline: rem(7);
+      border-radius: 50%;
+      font-size: rem(15);
+      color: var(--color-accent);
+      background-color: var(--color-additional-1);
+    }
+  }
+
+  &__theme {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      @include mobile-above {
+        text-shadow: 0.1px 0.1px 1px var(--color-accent);
+      }        
+    }
+
+    @include mobile {
+      text-transform: capitalize;
+      color: var(--color-additional-2);
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+
+  }
+
+  &__burger-button {
+    position: absolute;
+    right: rem(20);
+    top: 4;
+  }
+}
