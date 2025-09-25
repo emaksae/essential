@@ -23,6 +23,7 @@ class Header {
     this.themeElement = this.rootElement.querySelector(this.selectors.theme)
     this.bindEvents()
     this.initTheme()
+    this.initScrollObserver()
   }
 
   initTheme = () => {
@@ -55,14 +56,49 @@ class Header {
   }
 
   onMenuLinkClick = (event) => {
+    this.setActiveLink(event.currentTarget)
+    this.closeMenu()
+  }
+
+  setActiveLink = (activeLink) => {
     this.menuLinkElements.forEach((el) => {
       el.classList.remove(this.stateClasses.isActive)
     })
 
-    event.currentTarget.classList.add(this.stateClasses.isActive)
-
-    this.closeMenu()
+    activeLink.classList.add(this.stateClasses.isActive)
   }
+
+  initScrollObserver = () => {
+    const sections = document.querySelectorAll('section[id]')
+    
+    if (sections.length === 0) return
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -80% 0px',
+      threshold: 0
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const activeSectionId = entry.target.id
+          const correspondingLink = this.rootElement.querySelector(
+            `[data-js-header-menu-link][href="#${activeSectionId}"]`
+          )
+          
+          if (correspondingLink) {
+            this.setActiveLink(correspondingLink)
+          }
+        }
+      })
+    }, observerOptions)
+
+    sections.forEach(section => {
+      observer.observe(section)
+    })
+  }
+    
 
   bindEvents() {
     this.burgerButtonElement.addEventListener('click', this.onburgerButtontoggle)
@@ -74,3 +110,4 @@ class Header {
 }
 
 export default Header
+
