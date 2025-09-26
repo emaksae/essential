@@ -21,11 +21,11 @@
     --container-padding-x: #{rem(60)};
 
     @include mobile {
-        --container-padding-x: #{rem(20)};
+        --container-padding-x: #{rem(5)};
     }
 
     @include tablet {
-        --container-padding-x: #{rem(40)};
+        --container-padding-x: #{rem(20)};
     }
 
     --transition-duration: 0.2s;

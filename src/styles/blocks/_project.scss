@@ -18,7 +18,8 @@
 
     @include mobile {
       grid-template-columns: 1fr;
-      row-gap: rem(30);
+      row-gap: rem(10);
+      padding-top: rem(20);
     }
   }
 

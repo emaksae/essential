@@ -8,6 +8,10 @@
     grid-template-rows: 1fr 1fr;
     margin-top: rem(50);
     gap: rem(20);
+
+    @include mobile {
+      margin-top: rem(30);
+    }
   }
 
   &__title {
@@ -21,10 +25,10 @@
     display: flex;
     gap: rem(20);
 
-    @include mobile-s {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    @include mobile {
+      gap: rem(8);
     }
+
   }
 
   &__item {

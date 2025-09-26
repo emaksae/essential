@@ -19,8 +19,6 @@ body {
     font-weight: 500;
     color: var(--color-accent);
     background-color: var(--color-base);
-    // scroll-behavior: smooth;
-    // direction: 10s;
 
     &.dark-theme {
         --color-base: var(--color-black);
