@@ -61,9 +61,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: rem(15);
+    margin-top: rem(30);
 
     @include mobile {
+      margin-block: rem(10);
       height: rem(40);
     }
   }

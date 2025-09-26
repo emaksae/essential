@@ -47,6 +47,12 @@
 
   &__image {
     border-radius: rem(30);
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
   }
 
   &__about {

@@ -33,6 +33,7 @@
     color: var(--color-base);
     background-color: var(--color-accent);
     border-radius: rem(30);
+    transition-duration: var(--transition-duration);
   }
 
   &__link {

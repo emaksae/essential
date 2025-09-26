@@ -30,6 +30,18 @@
     right: 0;
     color: var(--color-accent);
     background-color: var(--color-additional-1);
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+      transform: scale(1.05);
+      color: var(--color-base);
+      background-color: var(--color-additional-2);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      color: var(--color-additional-1);
+    }
 
     @include laptop-above {
       right: 0;
@@ -38,6 +50,8 @@
     @include mobile {
       display: none;
     }
+
+    
   }
 
   &__bottom {
@@ -54,6 +68,10 @@
     display: flex;
     flex-direction: column;
     color: var(--color-accent);
+
+    &:hover {
+      text-shadow: 0.1px 0.1px 1px var(--color-accent);
+    }
 
     &--bold {
       @include fluid-text(20, 16);

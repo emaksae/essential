@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>emaksae</title>
+    <link rel="icon" type="image/png" href="/src/icons/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/src/icons/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/src/icons/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/icons/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="emaksae" />
+    <link rel="manifest" href="/src/icons/favicon/site.webmanifest" />
     <script type="module" src="/src/scripts/main.js" defer></script>
   </head>
   <body>
@@ -59,41 +65,76 @@
         <div class="project__inner container">
           <div class="project__header">
             <h2 class="project__title">Projects</h2>
-            <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias animi beatae voluptatibus veniam consectetur amet, odit odio labore unde vero perspiciatis magni obcaecati, iure non expedita cum commodi vel. Unde.</p>
+            <p class="project__description">This collection represents my journey as a frontend developer. It includes everything from learning projects where I explored new technologies to advanced work that tackles real-world challenges.</p>
           </div>
           <ul class="project__list">
-            <li class="project__item">                       
-              <img src="./src/images/blue.jpg" alt="" class="project__image">
+            <li class="project__item">
+              <a href="./src/images/screenshots/productivity.png" class="" target="_blank">                       
+                <img 
+                  src="./src/images/covers/productivity.png" 
+                  alt="" 
+                  class="project__image"
+                  loading="lazy"
+                >
+              </a>
               <div class="project__about">
-                <a href="#" class="project__name">To Do List</a>
-                <p class="project__subtitle">Simple task management application</p>
-              </div>              
-            </li>
-            <li class="project__item">                       
-              <img src="./src/images/blue.jpg" alt="" class="project__image">
-              <div class="project__about">
-                <a href="#" class="project__name">Futere-tech</a>
-                <p class="project__subtitle">Multi-page website dedicated to AI</p>
-              </div>              
-            </li>
-            <li class="project__item">                       
-              <img src="./src/images/blue.jpg" alt="" class="project__image">
-              <div class="project__about">
-                <a href="#" class="project__name">Productivity</a>
+                <h4 class="project__name">Productivity</h4>
                 <p class="project__subtitle">Single-page website about productivity research</p>
               </div>              
             </li>
-            <li class="project__item">                       
-              <img src="./src/images/blue.jpg" alt="" class="project__image">
+            <li class="project__item"> 
+              <a href="./src/images/screenshots/shop.png" class="" target="_blank">
+                <img 
+                  src="./src/images/covers/shop.png" 
+                  alt="" 
+                  class="project__image"
+                  loading="lazy"
+                >
+              </a>
               <div class="project__about">
-                <a href="#" class="project__name">Shop</a>
+                <h4 class="project__name">Shop</h4>
                 <p class="project__subtitle">Simple shop using React</p>
               </div>              
             </li>
-            <li class="project__item">                       
-              <img src="./src/images/blue.jpg" alt="" class="project__image">
+            <li class="project__item">  
+              <a href="./src/images/screenshots/todolist.png" class="" target="_blank">                     
+                <img 
+                  src="./src/images/covers/todolist.png" 
+                  alt="" 
+                  class="project__image"
+                  loading="lazy"
+                >
+              </a>
               <div class="project__about">
-                <a href="#" class="project__name">Designmore</a>
+                <h4 class="project__name">To Do List</h4>
+                <p class="project__subtitle">Simple task management application</p>
+              </div>              
+            </li>
+            <li class="project__item"> 
+              <a href="./src/images/screenshots/futeretech.png" class="" target="_blank">                      
+                <img 
+                  src="./src/images/covers/futeretech.png" 
+                  alt="" 
+                  class="project__image"
+                  loading="lazy"
+                >
+              </a>
+              <div class="project__about">
+                <h4 class="project__name">Futere-tech</h4>
+                <p class="project__subtitle">Multi-page website dedicated to AI</p>
+              </div>              
+            </li>            
+            <li class="project__item">                       
+              <a href="./src/images/screenshots/designmore.png" class="" target="_blank">
+                <img 
+                  src="./src/images/covers/designmore.png" 
+                  alt="" 
+                  class="project__image"
+                  loading="lazy"
+                >
+              </a>
+              <div class="project__about">
+                <h4 class="project__name">Designmore</h4>
                 <p class="project__subtitle">Fictional internet studio page</p>
               </div>              
             </li>
@@ -107,18 +148,15 @@
             <ul class="about__list">
               <li class="about__item">HTML (HTML5), EJS, JSX</li>
               <li class="about__item">CSS (CSS3), SASS (SCSS), PostCSS, Bootstrap, Tailwind, Animations</li>
-              <li class="about__item">JavaScript (ES6+, OOP), jQuery, TypeScript</li>
-              <li class="about__item">React</li>
-              <li class="about__item">Redux (Redux Toolkit, Redux Persist), MobX, Zustand</li>
-              <li class="about__item">Formik, React Hook Form, Yup, Axios, React Router, React Query</li>
-              <li class="about__item">Webpack, Vite, Gulp, Rollup</li>
+              <li class="about__item">JavaScript (ES6+, OOP), TypeScript(Understanding of core TypeScript concepts)</li>
+              <li class="about__item">React(Understanding of component-based architecture)</li>
+              <li class="about__item">Vite</li>
               <li class="about__item">Jest, React Testing Library, Enzyme, Chai, Mocha, Vitest</li>
               <li class="about__item">REST API, WebSockets, Long Polling</li>
-              <li class="about__item">BEM, Feature-Sliced Design, Accessibility, UX</li>
-              <li class="about__item">Git (GitHub, BitBucket, GitLab)</li>
+              <li class="about__item">BEM, Accessibility, UX</li>
+              <li class="about__item">Git (GitHub)</li>
               <li class="about__item">Figma, Adobe Photoshop</li>
-              <li class="about__item">CMS 1C-Bitrix, Drupal, OpenCart, MODX</li>
-              <li class="about__item">Agile, Waterfall, SCRUM</li>
+              <li class="about__item">Familiar with Agile/SCRUM principles</li>
               <li class="about__item">Competent written and oral speech</li>
               <li class="about__item">English level - B1</li>
             </ul>
@@ -126,17 +164,14 @@
           <div class="about__soft">
             <h2 class="about__title">Soft about</h2>
             <ul class="about__list">
-              <li class="about__item">I know how to work in a team, I have experience in communication with designers, managers and other developers</li>
+              <li class="about__item">I know how to work in a team</li>
               <li class="about__item">I am responsible about deadlines</li>
               <li class="about__item">I am attentive to the details of the terms of reference</li>
               <li class="about__item">I am demanding of the quality of my code, I follow the code-style</li>
               <li class="about__item">I have time management about</li>
               <li class="about__item">I welcome constructive criticism and am always happy to find new points of professional and personal growth</li>
-              <li class="about__item">I know how to solve conflict situations</li>
-              <li class="about__item">I am correctly convey thoughts, formulate questions</li>
               <li class="about__item">I write detailed reports on the work done, if required</li>
               <li class="about__item">I have experience working with a geographically distributed team (remote work)</li>
-              <li class="about__item">I have experience in mentoring, training of junior specialists</li>
               <li class="about__item">I am motivated to improve my about, constantly studying new technologies in my field of activity</li>
             </ul>
           </div>
